@@ -1,0 +1,66 @@
+;==================================================================
+;GSD-File for SMC SI-Unit(SI Valve Manifold) EX260-SPR1/2 32 OUT
+;Name: SMC_1430.GSD
+;Version:   1.0
+;Date:     09.12.02
+;==================================================================
+;
+#Profibus_DP
+GSD_Revision = 2        		;Version ID of the GSD file format
+Vendor_Name = "SMC Corporation"     		;Manufacturer's Name
+Model_Name = "EX260-SPR1/2"     		;Manufacturer's designation of DP device
+Revision = "V1.0"           		;Revision version of the DP device
+Ident_Number = 0x1430			;//143* Device type of the DP device
+Protocol_Ident = 0             		;Protocol ID of the DP device(0:PROFIBUS DP)
+Station_Type = 0           		;DP device type(0:DP Slave)
+FMS_supp = 0				;Not an FMS/DP mixed device
+Hardware_Release = "1"         		;Hardware release of the DP device
+Software_Release = "1"			;Software release of the DP device
+;
+9.6_supp = 1
+19.2_supp = 1                    
+45.45_supp = 1
+93.75_supp = 1                    
+187.5_supp = 1                    
+500_supp = 1                    
+1.5M_supp = 1
+3M_supp = 1
+6M_supp = 1
+12M_supp = 1                    
+MaxTsdr_9.6 = 15      
+MaxTsdr_19.2 = 15
+MaxTsdr_45.45 = 15
+MaxTsdr_93.75 = 15
+MaxTsdr_187.5 = 15
+MaxTsdr_500 = 15
+MaxTsdr_1.5M = 25
+MaxTsdr_3M = 50
+MaxTsdr_6M = 100                  
+MaxTsdr_12M = 200
+;
+Redundancy = 0                  	;Supports redundant transmission engineering(0:No)
+Repeater_Ctrl_Sig = 0			;The bus connector signal CNTR-P is specified(0:Not connected)
+24V_Pins = 0                    	;The bus connector signal M24V and P24V is specified(0:Not connected)
+;
+Bitmap_Device = "EX260_N"
+Bitmap_Diag = "EX260_D"
+Bitmap_SF = "EX260_S"
+Freeze_Mode_supp = 1			;//1430 Supports the Freeze mode(1:True)
+Sync_Mode_supp = 1			;Supports the Sync mode(1:True)
+Auto_Baud_supp = 1			;Supports automatic baudrate recognition(1:True)
+Set_Slave_Add_supp = 0      		;Supports the function Set_slave_Add(1:True)
+Fail_Safe = 1
+User_Prm_Data_len = 1			;The length of User_Prm_data
+User_Prm_Data = 0x00                    ;Specifies the default value for User_Prm_data
+Min_Slave_Intervall = 1			;The minimum interval time(Time Base:100 us)
+;
+Slave_Family = 4
+Modular_Station = 0                     ;0:compact device		 
+Implementation_Type = "SMCX"
+Max_Diag_Data_Len = 8 			;The maximum length of the diagnostic information
+Unit_Diag_Bit(0) = "POWER fault"
+;
+Module = "32 OUT" 0x23,0x00
+EndModule
+
+
